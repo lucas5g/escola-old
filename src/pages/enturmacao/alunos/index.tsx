@@ -5,7 +5,6 @@ function Aluno() {
         <Default>
             <main>
 
-
                 <h2>alunos</h2>
                 <p>
                     lorem*50

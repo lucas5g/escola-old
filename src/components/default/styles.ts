@@ -3,9 +3,9 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: grid;
     height: 100vh;
-    background: gray;
-    
-    grid-template-rows: 10vh 1fr 15vh;
+    /* background: red; */
+
+    grid-template-rows: auto 1fr auto;
 
     grid-template-areas: 'navbar' 
     'main'  'footer';
@@ -14,10 +14,11 @@ export const Container = styled.div`
         grid-area: navbar;
     }
     main{
-        grid-area: 'main';
+        grid-area: main;
+        /* height: 100vh */
     }
     footer{
-        grid-area: 'footer';
+        grid-area: footer;
     }
 
 }
