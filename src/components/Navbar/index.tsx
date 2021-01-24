@@ -6,39 +6,46 @@ import { Container } from './styles'
 function Navbar() {
 
     const [url, setUrl] = useState('')
+    const [nav, setNav] = useState('')
     // const [pathname, setPathname] = useState('')
     useEffect(() => {
         // setUrl('enturmacao')
         const pathname = window.location.pathname
+        const pathnameArray = pathname.split('/')
+        const baseUrl = pathnameArray[1]
 
-        setUrl(
-            pathname
-        )
-        console.log('teste')
-        console.log(url)
+
+        if(baseUrl === 'enturmacao'){
+            setUrl(`/${baseUrl}`)
+            setNav('Enturmação')
+            localStorage.setItem('nav', 'Enturmação')
+        }
+        // console.log({baseUrl})
     }, [])
 
     return (
         <Container >
-            <Link href='/enturmacao'>
-                Enturmação
+            <Link href={url}>
+                {nav}
             </Link>
+
             <ul>
                 <li>
-                    <Link href='/enturmacao/alunos'>
+                    <Link href={`${url}/alunos`}>
                         Alunos
                     </Link>
                 </li>
                 <li>
-                    <Link href='/enturmacao/turmas'>
+                    <Link href={`${url}/turmas`}>
                         Turmas
                     </Link>
                 </li>
                 <li>
-                    <Link href='/enturmacao/relatorios'>
-                        Relatorios
+                    <Link href={`${url}/relatorios`}>
+                        Relatórios
                     </Link>
                 </li>
+               
             </ul>
         </Container>
     )

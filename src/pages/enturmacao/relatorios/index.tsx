@@ -1,8 +1,10 @@
+import Default from "../../../components/Default"
+
 function Relatorios(){
     return(
-        <div>
+        <Default>
             Lista dos relatorios
-        </div>
+        </Default>
     )
 }
 

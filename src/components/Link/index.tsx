@@ -1,8 +1,8 @@
 import NextLink from 'next/link'
 
-function Link({href, children}){
+function Link({href, children, ...props}){
     return (
-        <NextLink href={href}>
+        <NextLink href={href} passHref>
             <a>
                 {children}
             </a>
