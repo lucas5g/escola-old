@@ -1,8 +1,10 @@
+import { Container } from './styles'
+
 function Navbar(){
     return (
-        <div>
-            navbar
-        </div>
+        <Container >
+            navbarzcvcvbv
+        </Container>
     )
 }
 

@@ -1,8 +1,10 @@
+import { Container } from "./styles"
+
 function Footer(){
     return (
-        <footer>
+        <Container >
             footer
-        </footer>
+        </Container>
     )
 }
 
