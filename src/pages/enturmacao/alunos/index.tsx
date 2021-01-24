@@ -1,4 +1,4 @@
-import Default from "../../../components/default"
+import Default from "../../../components/Default"
 
 function Aluno() {
     return (

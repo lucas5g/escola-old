@@ -1,24 +1,42 @@
-import Link from 'next/link'
+// import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import Link from '../Link'
 import { Container } from './styles'
 
-function Navbar(){
+function Navbar() {
 
     const [url, setUrl] = useState('')
-
+    // const [pathname, setPathname] = useState('')
     useEffect(() => {
-        setUrl('enturmacao')
+        // setUrl('enturmacao')
+        const pathname = window.location.pathname
+
+        setUrl(
+            pathname
+        )
+        console.log('teste')
+        console.log(url)
     }, [])
 
     return (
         <Container >
-            <a href="/enturmacao/alunos">
+            <Link href='/enturmacao'>
                 Enturmação
-            </a>
+            </Link>
             <ul>
                 <li>
                     <Link href='/enturmacao/alunos'>
-                        <a>Alunos</a>
+                        Alunos
+                    </Link>
+                </li>
+                <li>
+                    <Link href='/enturmacao/turmas'>
+                        Turmas
+                    </Link>
+                </li>
+                <li>
+                    <Link href='/enturmacao/relatorios'>
+                        Relatorios
                     </Link>
                 </li>
             </ul>
